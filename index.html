@@ -21,20 +21,15 @@
 
         <div class="app-container">
             
-            <!-- HEADER -->
-            <header>
-
-            </header>
-
             <!-- MAIN -->
-            <main>
+            <main class="w-100 vh-100 d-flex flex-column justify-content-center align-items-center">
+                <!-- La ul verrà creata solo se l'array di email è stato riempito completamente -->
+                <ul v-if="emailsList.length === emailsAmount" class="emails_list">
+                    <!-- Ciclo v-for che stampa ogni email dell'array -->
+                    <li v-for="(email,index) in emailsList">{{email}}</li>
+                </ul>
 
             </main>
-
-            <!-- FOOTER -->
-            <footer>
-
-            </footer>
 
         </div>
 
